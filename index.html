@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Serene Flow Yoga</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+:root {
+  --primary-bg: #f0f4f8;
+  --accent-bg: #ff6f61;
+  --neutral-bg: #ffffff;
+  --text-color: #333333;
+  --accent-color: #ff6f61;
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+  margin:0;
+  font-family: var(--font-family);
+  color: var(--text-color);
+  background: var(--neutral-bg);
+}
+a { text-decoration:none; color:inherit; }
+header, nav, section, footer { padding: 2rem 1rem; }
+nav { background: var(--primary-bg); display:flex; justify-content:center; gap:1rem; }
+nav a { padding:0.5rem 1rem; border-radius:4px; }
+nav a:hover { background: var(--accent-bg); color:#fff; }
+h1, h2, h3 { margin-top:0; }
+button, .btn {
+  background: var(--accent-bg);
+  color:#fff;
+  border:none;
+  padding:0.75rem 1.5rem;
+  border-radius:4px;
+  cursor:pointer;
+}
+button:hover, .btn:hover { opacity:0.9; }
+section { margin-bottom:2rem; }
+#hero {
+  background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+  color:#fff;
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  height:60vh;
+}
+#hero h1 { font-size:3rem; margin-bottom:0.5rem; }
+#hero p { font-size:1.25rem; margin-bottom:1.5rem; max-width:600px; }
+#about { display:grid; grid-template-columns:1fr 1fr; gap:2rem; align-items:center; background:var(--neutral-bg); }
+#about img { width:100%; border-radius:8px; }
+#class_finder { background:var(--accent-bg); color:#fff; }
+#class_finder form { display:flex; flex-wrap:wrap; gap:1rem; justify-content:center; }
+#class_finder select, #class_finder input { padding:0.5rem; border:none; border-radius:4px; }
+#class_finder button { flex:1 1 200px; }
+#class_finder .results { margin-top:1rem; background:rgba(255,255,255,0.1); padding:1rem; border-radius:4px; }
+#instructor_showcase { background:var(--neutral-bg); }
+.instructor-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:1.5rem; }
+.instructor-card { background:var(--neutral-bg); padding:1rem; border-radius:8px; box-shadow:0 2px 5px rgba(0,0,0,0.1); text-align:center; }
+.instructor-card img { width:100%; height:200px; object-fit:cover; border-radius:4px; margin-bottom:0.75rem; }
+#schedule_overview { background:var(--primary-bg); color:#fff; }
+.schedule-grid { display:grid; grid-template-columns:repeat(7,1fr); gap:0.5rem; }
+.schedule-grid div { background:rgba(255,255,255,0.2); padding:0.5rem; border-radius:4px; text-align:center; }
+#pricing_table { background:var(--neutral-bg); }
+.pricing-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:1.5rem; }
+.pricing-card { border:1px solid var(--accent-bg); border-radius:8px; padding:1.5rem; text-align:center; }
+.pricing-card h3 { margin-top:0; }
+.pricing-card button { margin-top:1rem; }
+#testimonials { background:var(--neutral-bg); }
+.slider { position:relative; overflow:hidden; }
+.slider input { display:none; }
+.slider .slides { display:flex; transition:transform 0.5s ease-in-out; }
+.slider .slide { min-width:100%; box-sizing:border-box; padding:1rem; text-align:center; }
+.slider .slide img { width:80px; height:80px; border-radius:50%; margin:0 auto 1rem; }
+.slider .nav { position:absolute; top:50%; transform:translateY(-50%); width:100%; display:flex; justify-content:space-between; }
+.slider .nav label { background:rgba(0,0,0,0.5); color:#fff; padding:0.5rem; cursor:pointer; }
+#faq { background:var(--neutral-bg); }
+details { margin-bottom:1rem; }
+details summary { cursor:pointer; font-weight:bold; }
+#contact_form { background:var(--primary-bg); color:#fff; display:flex; flex-wrap:wrap; gap:1rem; }
+#contact_form form { flex:1 1 300px; }
+#contact_form iframe { flex:1 1 300px; border:none; }
+@media(max-width:768px){
+  #about { grid-template-columns:1fr; }
+  #class_finder form { flex-direction:column; }
+  #contact_form { flex-direction:column; }
+}
+</style>
+</head>
+<body>
+<header>
+<nav>
+<a href="#hero">Home</a>
+<a href="#about">About</a>
+<a href="#class_finder">Classes</a>
+<a href="#instructor_showcase">Instructors</a>
+<a href="#schedule_overview">Schedule</a>
+<a href="#pricing_table">Pricing</a>
+<a href="#testimonials">Testimonials</a>
+<a href="#faq">FAQ</a>
+<a href="#contact_form">Contact</a>
+</nav>
+</header>
+
+<section id="hero">
+<h1>Discover Your Perfect Yoga Flow</h1>
+<p>At Serene Flow, we bring yoga to your busy life with classes that fit any schedule. Whether you're new to yoga or looking to deepen your practice, our welcoming community supports your journey.</p>
+<a href="#class_finder" class="btn">Explore Classes</a>
+</section>
+
+<section id="about">
+<h2>Why Serene Flow?</h2>
+<p>Serene Flow was founded to make yoga accessible for beginners, busy professionals, and anyone seeking stress relief. Our mission is to guide you toward greater flexibility, focus, and well-being through thoughtfully designed classes and supportive instructors.</p>
+<img src="https://images.unsplash.com/photo-1526401485004-5b1b1b1b1b1b?auto=format&fit=crop&w=800&q=80" alt="Yoga class">
+</section>
+
+<section id="class_finder">
+<h2>Find Your Class</h2>
+<p>Use our intuitive search to filter by style, level, and time, then book your spot with a single click.</p>
+<form>
+<select name="style">
+<option value="">Style</option>
+<option>Vinyasa</option>
+<option>Hatha</option>
+<option>Restorative</option>
+</select>
+<select name="level">
+<option value="">Level</option>
+<option>Beginner</option>
+<option>Intermediate</option>
+<option>Advanced</option>
+</select>
+<input type="date" name="date">
+<input type="time" name="time">
+<button type="submit">Search Classes</button>
+</form>
+<div class="results">
+<h3>Results</h3>
+<ul>
+<li>Vinyasa Flow – 10:00 AM – 60 mins – <button class="btn">Book</button></li>
+<li>Hatha Basics – 12:30 PM – 45 mins – <button class="btn">Book</button></li>
+<li>Restorative Evening – 6:00 PM – 90 mins – <button class="btn">Book</button></li>
+</ul>
+</div>
+</section>
+
+<section id="instructor_showcase">
+<h2>Meet Our Instructors</h2>
+<p>Our certified teachers bring years of experience and a passion for guiding students of all levels. Each instructor’s unique style ensures a personalized and transformative experience.</p>
+<div class="instructor-grid">
+<div class="instructor-card">
+<img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=400&q=80" alt="Instructor">
+<h3>Alex Rivera</h3>
+<p>Yoga Teacher with 10 years of experience.</p>
+<p>Qualifications: RYT 200, Pilates Instructor.</p>
+<a href="#" class="btn">Full Bio</a>
+</div>
+<div class="instructor-card">
+<img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=400&q=80" alt="Instructor">
+<h3>Maria Chen</h3>
+<p>Specialist in restorative and prenatal yoga.</p>
+<p>Qualifications: RYT 500, Certified Prenatal Instructor.</p>
+<a href="#" class="btn">Full Bio</a>
+</div>
+<div class="instructor-card">
+<img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=400&q=80" alt="Instructor">
+<h3>David Kim</h3>
+<p>Dynamic Vinyasa and power yoga instructor.</p>
+<p>Qualifications: RYT 200, Power Yoga Certified.</p>
+<a href="#" class="btn">Full Bio</a>
+</div>
+</div>
+</section>
+
+<section id="schedule_overview">
+<h2>Upcoming Sessions</h2>
+<p>Plan ahead with our interactive calendar that highlights all upcoming classes. Filter by day or view type to find the perfect fit for your schedule.</p>
+<div class="schedule-grid">
+<div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div><div>Sun</div>
+<div>Vinyasa – 10:00 AM</div><div>Hatha – 12:30 PM</div><div>Restorative – 6:00 PM</div><div>Power – 8:00 AM</div><div>Yoga for Kids – 4:00 PM</div><div>Weekend Flow – 9:00 AM</div><div>Sunrise – 5:30 AM</div>
+</div>
+</section>
+
+<section id="pricing_table">
+<h2>Flexible Pricing Options</h2>
+<p>Choose from single class passes, monthly memberships, or unlimited packages to suit your lifestyle. All plans include access to our full range of classes and exclusive member benefits.</p>
+<div class="pricing-grid">
+<div class="pricing-card">
+<h3>Single Class</h3>
+<p>$15</p>
+<ul>
+<li>One class per visit</li>
+<li>No commitment</li>
+</ul>
+<a href="#" class="btn">Choose Plan</a>
+</div>
+<div class="pricing-card">
+<h3>Monthly Membership</h3>
+<p>$80</p>
+<ul>
+<li>Unlimited classes</li>
+<li>Member-only workshops</li>
+</ul>
+<a href="#" class="btn">Choose Plan</a>
+</div>
+<div class="pricing-card">
+<h3>Unlimited Pass</h3>
+<p>$200</p>
+<ul>
+<li>Unlimited classes for 3 months</li>
+<li>Priority booking</li>
+</ul>
+<a href="#" class="btn">Choose Plan</a>
+</div>
+</div>
+</section>
+
+<section id="testimonials">
+<h2>What Our Students Say</h2>
+<p>Hear how Serene Flow has helped people reduce stress, improve flexibility, and find balance in their daily lives.</p>
+<div class="slider">
+<input type="radio" name="slide" id="slide1" checked>
+<input type="radio" name="slide" id="slide2">
+<input type="radio" name="slide" id="slide3">
+<div class="slides">
+<div class="slide">
+<img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=200&q=80" alt="Student">
+<blockquote>"Serene Flow transformed my mornings. I feel more centered and energized!"</blockquote>
+<p>- Emily R.</p>
+</div>
+<div class="slide">
+<img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=200&q=80" alt="Student">
+<blockquote>"The instructors are supportive and the classes fit my busy schedule perfectly."</blockquote>
+<p>- Michael T.</p>
+</div>
+<div class="slide">
+<img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=200&q=80" alt="Student">
+<blockquote>"I’ve never felt more relaxed. Highly recommend!"</blockquote>
+<p>- Sophia L.</p>
+</div>
+</div>
+<div class="nav">
+<label for="slide1">&#10094;</label>
+<label for="slide2">&#10094;</label>
+<label for="slide3">&#10094;</label>
+</div>
+</div>
+</section>
+
+<section id="faq">
+<h2>Frequently Asked Questions</h2>
+<p>Got questions about class types, booking, or policies? Find clear answers to help you get started with confidence.</p>
+<details>
+<summary>What is the cancellation policy?</summary>
+<p>Classes can be cancelled up to 24 hours before the scheduled time for a full refund.</p>
+</details>
+<details>
+<summary>Do I need to bring my own mat?</summary>
+<p>We provide mats for all classes, but you are welcome to bring your own if you prefer.</p>
+</details>
+<details>
+<summary>Can I book a class online?</summary>
+<p>Yes, use the search and booking feature in the Classes section to reserve your spot.</p>
+</details>
+</section>
+
+<section id="contact_form">
+<h2>Get in Touch</h2>
+<p>Have questions or need more information? Fill out the form and we’ll get back to you promptly.</p>
+<form>
+<label for="name">Name</label>
+<input type="text" id="name" name="name" required>
+<label for="email">Email</label>
+<input type="email" id="email" name="email" required>
+<label for="message">Message</label>
+<textarea id="message" name="message" rows="4" required></textarea>
+<button type="submit" class="btn">Send Message</button>
+</form>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019842593842!2d-122.419415084681!3d37.77492977975944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c5b1e5b1b%3A0x5b1b1b1b1b1b1b1b!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1610000000000" allowfullscreen="" loading="lazy"></iframe>
+</section>
+
+<footer>
+<p>&copy; 2026 Serene Flow Yoga. All rights reserved.</p>
+</footer>
+</body>
+</html>
